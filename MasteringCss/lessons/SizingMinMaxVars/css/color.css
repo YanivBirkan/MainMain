@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #999;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    /* color: #fff; */
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    /* background-color: #7700aa; */
+    /* background-color: #70a; */
+    /* background-color: #7700aa33; */
+    /* background-color: #70a3; */
+    /* background-color: rgb(130, 0, 185); */
+
+    /* background-color: rgba(119, 0, 170, .5); */
+
+    background-image: linear-gradient(red, blue, green);
+    background-image: linear-gradient(red, blue);
+    background-image: linear-gradient(to right, red, blue);
+    background-image: linear-gradient(45deg, red, blue);
+    background-image: linear-gradient(red 0 50%, blue 50% 100%);
+    background-image: linear-gradient(45deg, red 0 50%, blue 50% 100%);
+    background-image: repeating-linear-gradient(lightblue 0 10%, darkslateblue 10% 20%);
+    cursor: pointer;
+}
+
+/* html {
+    --s: 150px; 
+    --c1: #f7d2a1;
+    --c2: #05057e;
+    
+    --_g: 
+       var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+       var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+       #0000 96%;
+    background:
+      radial-gradient(50% 50% at 100% 0,var(--_g)),
+      radial-gradient(50% 50% at 0 100%,var(--_g)),
+      radial-gradient(50% 50%,var(--_g)),
+      radial-gradient(50% 50%,var(--_g)) calc(var(--s)/2) calc(var(--s)/2)
+      var(--c1);
+    background-size: var(--s) var(--s);
+  } */

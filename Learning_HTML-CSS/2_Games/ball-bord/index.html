@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mister Balls</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body onkeyup="onHandleKey(event)" onload="onInitGame()">
+    <div class="headers">
+    <h1>Collect those Balls</h1>
+    <h2>Collected balls: <span class="ballCount">0</span></h1>
+    <h3>Balls around you: <span>0</span></h3>
+    </div>
+
+    <div class="game">
+      <table>
+        <tbody class="board"></tbody>
+      </table>
+      <div class="victory hide">
+        <h2>You won</h2>
+        <button onclick="onRestart()">Restart</button>
+      </div>
+    </div>
+
+    <script src="js/"
+    <script src="js/util.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+</html>

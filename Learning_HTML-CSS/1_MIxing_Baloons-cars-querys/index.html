@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Fisrt Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+    <h3>Its my first Page</h3>
+    <div class="links-container">
+      <!-- <a href="http://google.com">Go Search</a>
+      <a href="http://unsplash.com">Go Search Photos</a> -->
+      <a href="race.html">Go To Race</a>
+    </div>
+    <hr />
+    <p>this is a paragraph</p>
+    <button class="btn btn-primary" onclick="onDoIt(event)">Click</button>
+    <button class="send-btn btn btn-success" onclick="onSend(this)">Send</button>
+    <p>
+      this is a lot of words with no msg , just a lot of words that reapt with
+      no contenet or any massege
+    </p>
+    <div class="box">Im A Box</div>
+    <h3 hidden class="user-msg"></h2>
+
+    <img src="img/01.jpg" alt="my first page" />
+  </body>
+</html>
+
+<script>
+  function onDoIt(ev){
+    console.log("clicked");
+
+    document.querySelector(".box").innerText = 'See MSG >>>';
+    flashMsg("this is a hidden msg");
+  }
+  
+
+  function flashMsg(msg){
+    let elUserMsg = document.querySelector(".user-msg");
+    elUserMsg.innerText=msg;
+    elUserMsg.hidden=false;
+    setTimeout( ()=>{
+      elUserMsg.hidden = true
+    },2250);
+
+  }
+
+  function onSend(elSentBtn){
+    console.log("sending...");
+    elSentBtn.innerText= "Sending..."
+  }
+</script>

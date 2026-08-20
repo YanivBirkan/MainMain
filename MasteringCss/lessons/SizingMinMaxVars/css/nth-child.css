@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(108, 151, 177);
+    color: beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+
+    width: min-content;
+    margin: 100px auto 0;
+
+    border-left: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}
+
+.cell{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+
+    border-top: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+}
+
+/* .cell:first-child{
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:last-child{
+    background-color: rgb(206, 151, 74);
+} */
+
+/* 
+  Change the selector value and see it's effect... 
+  Use number literals 1, 2, 5... 
+  Then use even, odd, 2n, 3n, 4n..., 3n + 1 etc... 
+*/
+
+/* .cell:nth-child(5){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-child(even){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-child(odd){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-child(2n){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-child(3n){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-child(3n + 1){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* div:nth-child(1){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* div:nth-child(2){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-last-child(3) {
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-last-child(3n) {
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-child(n + 3) {
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-last-child(n + 3) {
+    background-color: rgb(206, 151, 74);
+} */
+
+/* 
+  n + 3  = the 3rd element and all the following elements
+  -n + 3 = the 3rd element and all the preceding elements
+*/
+
+/* .cell:nth-last-child(-n + 3) {
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-last-child(-n + 3 of .even-cell) {
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-child(n + 3):nth-last-child(n + 3){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* .cell:nth-child(n + 3):nth-last-child(n + 3):not(.cell:nth-child(n + 5):nth-last-child(n + 5)){
+    background-color: rgb(206, 151, 74);
+} */
+
+/* :only-child {
+    border: 1px solid darkred;
+} */
+
+/*
+  :nth-of-type selects nth-of-tag-type, not nth-of-class-type
+*/
+
+/* .cell:first-of-type{
+    color:  darkred;
+} */
+
+/* .cell:last-of-type{
+    color:  darkred;
+} */
+
+/* div:last-of-type{
+    color:  darkred;
+} */
+
+/* This targets every 3rd div  */
+/* div:nth-of-type(3n) {
+    color:  darkred;
+} */
+
+/* 
+   This targets every 3rd div, if it has a class of even-cell 
+   (not every third element of class even-cell !!!).
+   So if we remove the even-cell class from cell 6, it won't get selected
+   but the other divs will remain the same 
+*/
+/* .even-cell:nth-of-type(3n) {
+    color:  darkred;
+} */

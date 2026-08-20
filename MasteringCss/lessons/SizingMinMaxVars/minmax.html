@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/minmax.css">
+    <title>Min Max</title>
+</head>
+<body onresize="updateWidth()" onload="updateWidth()">
+    
+    <div class="box box1">
+        <h2>min-width: 300px;</h2>
+        <h2>width: 70%;</h2>
+        <h2 class="width"></h2>
+    </div>
+    
+    <div class="box box2">
+        <h2>max-width: 500px;</h2>
+        <h2>width: 70%;</h2>
+        <h2 class="width"></h2>
+    </div>
+    
+    <div class="box box3">
+        <h2>min-width: 300px;</h2>
+        <h2>max-width: 500px;</h2>
+        <h2>width: 70%;</h2>
+        <h2 class="width"></h2>
+    </div>
+    
+    <script>
+        function updateWidth(){
+            var elWidths = document.querySelectorAll('.width')
+
+            for(var i = 0; i < elWidths.length; i++){
+                elWidths[i].innerText = elWidths[i].parentElement.clientWidth + 'px'
+            }
+        }
+    </script>
+</body>
+</html>

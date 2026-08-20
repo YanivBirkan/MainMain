@@ -1,0 +1,53 @@
+h1,
+h3 {
+  text-align: center;
+  padding-top: 20px;
+}
+body {
+  background-color: rgb(136, 136, 136);
+  text-align: center;
+}
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.board {
+  height: 525px;
+  width: 800px;
+  background-color: rgb(241, 239, 235);
+  margin: auto;
+  /* margin-top: 40px; */
+  box-shadow: 5px 5px 5px 0 rgba(211, 209, 209, 0.658);
+}
+.game-board{
+  margin: auto;
+  padding-top: 50px;
+  border-collapse: separate; /* Required for spacing to work */
+  border-spacing: 1px 1px; /* Horizontal spacing (10px) and Vertical spacing (15px) */
+}
+td{
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgb(136, 136, 136);
+    color: black;
+}
+
+.black {
+    background-color: rgb(98, 98, 98);
+}
+
+.white {
+    background-color: rgb(236, 245, 245);
+}
+
+.selected {
+    outline: 5px solid orange;
+}
+
+.mark {
+    background-color: lightpink;
+}
+
+.center {
+    margin: auto;
+}

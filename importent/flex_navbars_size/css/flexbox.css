@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    background-color: #eee;
+}
+
+h1 {
+    font-family: monospace;
+    text-align: center;
+    margin-block-start: 50px;
+}
+
+/* #if the screen is smaller than 1000px width*/
+@media (max-width: 1000px)  {
+    /* because there 2 items 50% width , the third go to other line */
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* fu */
+    .item3{
+        flex-grow: 1;
+    }
+}
+.flex-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+
+    /* flex-direction: column; */
+    justify-content: start;
+    /* align-items: center; */
+    /* gap: 10px; */
+
+    width:  60vw;
+    height: calc(100vh - 92px);
+    margin: 10px auto;
+    
+    border: 1px solid lightgrey;
+    background-color: #fff;
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100px; */
+    /* ##for 2 items that 50% width in  */
+    flex-basis: 50%;
+    /* padding-block-start: .5em; */
+    /* flex-shrink: 1; */
+    /* flex-grow: 1; */
+
+    text-align: center;
+    color: rgb(131, 191, 204);
+
+    background-color: rgb(227, 227, 227);
+    outline: 1px solid darkgrey;
+
+    font-size: 2em;
+}
+
+.item1 {
+    /* align-self: start; */
+    height: 100px;
+    flex-shrink: 2;
+    /* flex-grow: 2; */
+}
+
+.item2 {
+    /* order: -1; */
+    /* align-self: end; */
+    height: 150px;
+}
+
+.item3 {
+    /* flex-grow: 1; */
+    /* margin-inline-start: auto; */
+    height: 200px;
+}

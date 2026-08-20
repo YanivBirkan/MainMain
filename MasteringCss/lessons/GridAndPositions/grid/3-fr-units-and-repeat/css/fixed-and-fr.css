@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #dddddd;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr 60px 3fr;
+    grid-template-rows: 65px;
+    gap: 10px;
+
+    width: 90%;
+    margin: 200px auto;
+}
+
+.item {
+    padding-block-start: 20px;
+    background-color: lightblue;
+
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}

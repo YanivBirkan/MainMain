@@ -1,0 +1,39 @@
+body {
+  background-color: #e8e8e8;
+  text-align: center;
+}
+h1 {
+  border-bottom: darkblue 3px solid;
+}
+h3 {
+  color: dodgerblue;
+}
+img {
+  width: 300px;
+  height: 150px;
+  margin: auto;
+
+  margin-top: 25px;
+  box-shadow: 0 0 20px 15px rgba(156, 155, 155, 0.658);
+}
+.box {
+  box-shadow: rgba(156, 155, 155, 0.658) 0px 5px 15px;
+  border: red 2px solid;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  margin: auto;
+  padding-top: 10px;
+  background-color: aquamarine;
+}
+.links-container {
+  padding: 10px;
+}
+.btn {
+  box-shadow: rgba(156, 155, 155, 0.658) 0px 5px 15px;
+  margin-right: 3px;
+}
+
+.btn:hover {
+  font-weight: 500;
+}

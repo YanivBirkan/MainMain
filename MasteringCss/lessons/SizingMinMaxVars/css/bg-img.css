@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.box {
+    width: 500px;
+    height: 500px;
+
+    margin: 120px auto;
+    padding: 20px;
+    border: 1px solid lightgrey;
+
+    overflow: scroll;
+
+    text-align: justify;
+    color: #888;
+    line-height: 1.6;
+
+    background-image: url('../img/dog.jpeg');
+    /* background-image: url('../img/paisley.webp'); */
+
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: local; */
+    
+    /* background-image: linear-gradient(45deg, orangered , orange ); */
+    /* background-image: repeating-linear-gradient(25deg, lightsteelblue, lightsteelblue 1%, lightgrey 1%, lightgrey 1% 2%); */
+}

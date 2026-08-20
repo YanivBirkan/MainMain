@@ -1,0 +1,76 @@
+.flag{
+    height: 200px;
+    width: 400px;
+}
+
+.swis{
+    background-color: red;
+    position: relative;
+    z-index: 3;
+}
+.hor-ban{
+    position: absolute;
+    height: 40px;
+    width: 120px;
+    background-color: white;
+    top:80px;
+    left:140px;
+}
+.vert-ban{
+    position: absolute;
+    height: 120px;
+    width: 40px;
+    background-color: white;
+    top:40px;
+    left:180px;
+}
+
+.isr{
+    background-color: white;
+    border: 3px solid black;
+    position: relative;
+    top:-100px;
+    left:200px;
+    z-index: 2;
+}
+.top-ban{
+    position: absolute;
+    background-color: rgb(3, 3, 184);
+    width: 100%;
+    top: 10px;
+    height: 15%;
+}
+.bot-ban{
+    position: absolute;
+    background-color: rgb(3, 3, 184);
+    height: 15%;
+    width: 100%;
+    bottom: 10px;
+}
+.star-img{
+    position: absolute;
+    height: 55%;
+    width: 55%;
+    top: 40px;
+    left:80px
+}
+
+.palulu{
+    top: -200px;
+    left: 50px;
+    background-color: rgb(78, 115, 224);
+    position: relative;
+    z-index: 1;
+}
+.circle{
+    position: absolute;
+    background-color: rgb(254, 254, 117);
+    height: 150PX;
+    width: 150PX;
+    border-radius: 50%;
+    left: 60px;
+    top: 20px;
+}
+.top-flag{
+    z-index: 100;
+}

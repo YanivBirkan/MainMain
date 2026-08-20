@@ -1,0 +1,191 @@
+body{
+    background-color: rgba(245, 245, 220, 0.697);
+}
+h1{
+    text-align: center;
+}
+/* header */
+.settings{
+    width: 100%;
+    display: flex;
+}
+
+/* levels div */
+.levels{
+    box-shadow: 16px 15px 15px 0px rgba(73, 73, 73, 0.2);;
+    border-radius: 8px;
+    width: 30%;
+    height:160px;
+    margin-left: 30px;
+    background-color: #d1d1d1;
+
+}
+
+.levels h2{
+    text-align: center;
+    color: rgb(91, 89, 89);
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+.levels-options button{
+    border:none;
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color: #008CBA;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    height: 30px;
+    width: 80%;
+    font-size: 16px;
+
+}
+.levels-options button:hover{
+    background-color: #43a4c5;
+    font-weight: bold ;
+
+}
+/* game details div's */
+.details{
+    box-shadow: 16px 15px 15px 0px rgba(73, 73, 73, 0.2);;
+    border-radius: 8px;
+    width: 30%;
+    height:160px;
+    margin-left: 30px;
+    background-color: #d1d1d1;
+    font-size: 16px;
+}
+
+
+.emoji{
+    margin-left: 80px;
+}
+.emoji:hover{
+    cursor: pointer;
+
+}
+.hints{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    margin-left :100px;
+    cursor: pointer;
+}
+.details-top{
+    display: flex;
+  padding: 0;
+  box-sizing: border-box; 
+  align-items: center;
+  margin-bottom: 15px;
+}
+.details-mid{
+    display: flex;
+    padding: 0;
+    box-sizing: border-box; 
+    margin-left: 20px;
+  margin-bottom: 15px;
+
+}
+.details-bot{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  margin-bottom: 15px;
+
+}
+.details h3{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: flex;
+
+}
+
+/* hellpers div */
+.helpers{
+  
+    box-shadow: 16px 15px 15px 0px rgba(73, 73, 73, 0.2);;
+    border-radius: 8px;
+    width: 30%;
+    height:160px;
+    margin-left: 30px;
+    background-color: #d1d1d1;
+    font-size: 16px;
+}
+
+.helpers button{
+    border:none;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    height: 30px;
+    width: 80%;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn-safe{
+    background-color: #04AA6D;
+}
+.btn-safe:hover {
+    background-color: #1ba975;
+    font-weight: bold ;
+}
+.btn-undo{
+    background-color: #f44336;
+}
+.btn-undo:hover{
+    background-color: #fa5d52;
+    font-weight: bold ;
+
+}
+.btn-mega{
+    background-color: #ffa500;
+}
+
+.btn-mega:hover{
+    background-color: #ffbb3d;
+    font-weight: bold ;
+
+}
+.btn-mode{
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #3c3c3c;
+}
+.cell {
+    width: 35px;
+    height: 35px;
+    border-radius: 7px;
+    /* background-color: #d1d1d1; */
+    background-color: #d1d1d1;
+    color:#f8faf9;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* board */
+.game-board{
+    width:max-content;
+    margin: 50px auto;
+}
+
+.bombed{
+    background-color: #f57474;
+}
+.clicked{
+    background-color: #9f9494;   
+}

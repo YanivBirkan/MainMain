@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 60px;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: lightsteelblue;
+    margin: 20px auto;
+}
+
+.big {
+    width: 250px;
+    height: 250px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.outline {
+    border: 2px solid white;
+}
+
+.inner {
+    background-color: darkslategray;
+    width: 50%;
+    height: 50%;
+}
+
+.circle > .outline {
+    background-color: orange;
+}

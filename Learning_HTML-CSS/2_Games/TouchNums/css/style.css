@@ -1,0 +1,70 @@
+h1, h3{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.board {
+  height: 600px;
+  width: 600px;
+  background-color: rgb(241, 239, 235);
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 5px 5px 5px 0 rgba(211, 209, 209, 0.658);
+}
+.buttons{
+  text-align: center; /* Centers the inline-block buttons */
+  width: 100%;   
+  margin-top: 10px;
+  /* margin-left: 130px; */
+}
+.game-table{
+  margin: auto;
+  margin-top: 20px;
+  border-collapse: separate; /* Required for spacing to work */
+  border-spacing: 5px 5px; /* Horizontal spacing (10px) and Vertical spacing (15px) */
+}
+td.avibale{
+  color: antiquewhite;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(2, 57, 116);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+td.avibale:hover {
+  font-weight: 500;
+  background-color: rgb(30, 70, 113);
+}
+.disabeld{
+  color: antiquewhite;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(255, 84, 84);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+.disabeld:hover{
+  font-weight: 500;
+  background-color: rgb(255, 84, 84);
+}
+.victory{
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
+}
+.hide{
+  display: none;
+}
+.btn {
+display: inline-block;
+  box-shadow: rgba(156, 155, 155, 0.658) 0px 5px 15px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.btn:hover {
+  font-weight: 500;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>MineSweeper</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <header>
+        <h1>MineSweeper</h1>
+        <button class="btn btn-mode"><span class="modeOp">Dark</span> mode</button>
+        <div class="settings">
+            <div class="levels">
+                <h2>choose level:</h3>
+                    <div class="levels-options">
+                        <button class="Beginner" onclick="onChooseLevel(this)">Beginner Level (4*4)</button>
+                        <button class="Medium" onclick="onChooseLevel(this)">Medium Level (8*8)</button>
+                        <button class="Expert" onclick="onChooseLevel(this)">Expert Level (12*12)</button>
+                    </div>
+            </div>
+            <div class="details">
+                <div class="details-top">
+                    <h3>
+                        Time: <span class="time timer">00:00</span>
+                        <button class="smiley emoji" onclick="onSmileyClicked()">😃</button>
+                    </h3>
+                    <h3>
+                        <div class="hints">
+                            <span class="hint1">💡</span>
+                            <span class="hint2">💡</span>
+                            <span class=" hint3">💡</span>
+                        </div>
+                    </h3>
+                </div>
+                <div class="lives details-mid"><h3>Lives: <span class="time">❤️❤️❤️</span></h3></div>
+                <div class="details-bot"><h3>Record Time: <span class="time ">00:00.00</span></h3></div>
+            </div>
+            <div class="helpers">
+                <button class="btn btn-safe">Safe click </button>
+                <button class="btn btn-undo">undo</button>
+                <button class="btn btn-mega">Mega Hint ! </button>
+
+
+
+            </div>
+        </div>
+    </header>
+    <body onload="onInit()">
+        <div class="game-board">
+            <table class="board">
+                <tbody class="board-cells"> </tbody>
+            </table>
+        </div>
+
+
+        <div hidden class="popup">
+          
+            
+        </div>
+        
+        <script src="js/main.js"></script>
+    </body>
+</html>

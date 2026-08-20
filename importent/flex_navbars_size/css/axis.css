@@ -1,0 +1,62 @@
+.flex-container, .flex-item {
+    position: relative;
+}
+
+.width {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+
+    font-size: 12px;
+    font-family: monospace;
+    color: #777;
+}
+
+.flex-container > .width {
+    font-size: 16px;
+}
+
+.flex-container::before, .flex-container::after {
+    position: absolute;
+    z-index: 1;
+    
+    font-family: monospace;
+    color: rgb(86, 86, 86);
+}
+
+.flex-container.hidden::before, .flex-container.hidden::after {
+    display: none;
+}
+
+.flex-container::before {
+    content: 'main axis';
+    top: 50%;
+    translate: 0 -50%;
+
+    height: 1px;
+    width: 100%;
+
+    padding-inline-start: .5em;
+    border-block-start: 1px dashed rgba(0, 128, 0, 0.2);
+}
+
+.flex-container::after {
+    content: 'cross axis';
+    left: 50%;
+    translate: -50%;
+    writing-mode: vertical-rl;
+
+    width: 1px;
+    height: 100%;
+
+    padding-inline-start: .5em;
+    border-block-start: 1px dashed rgba(255, 0, 0, 0.2);
+}
+
+.column::before {
+    content: 'cross axis';
+}
+
+.column::after {
+    content: 'main axis';
+}

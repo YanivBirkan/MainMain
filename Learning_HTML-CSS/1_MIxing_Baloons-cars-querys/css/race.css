@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    color: aliceblue;
+}
+a{
+    color: aliceblue;
+}
+.road{
+    border-block: 5px white dashed;
+    padding: 10px;
+    margin: 10px;
+}
+.car{
+    width: 200px;
+    height: 150px;
+    border: 2px solid wheat;
+    border-radius: 10px;
+    margin-block: 35px;
+}
+.car1{
+    background-color: tomato;
+}
+.car2{
+    background-color: rebeccapurple;
+}

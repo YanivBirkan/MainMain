@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/axis.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    
+    <title>Flexbox</title>
+</head>
+
+<body onload="setAxis()" onresize="updateWidth()">
+    
+    <h1>flexbox</h1>
+    <div class="flex-container">
+
+        <div class="flex-item item1">
+            <span>1</span>
+        </div>
+
+        <div class="flex-item item2">
+            <span>2</span>
+        </div>
+        
+        <div class="flex-item item3">
+            <span>3</span>
+        </div>
+
+        <span class="width"></span>
+    </div>
+
+    <script>
+        function setAxis(){
+            const elFlexItems = document.querySelectorAll('.flex-item')
+            elFlexItems.forEach(elItem => elItem.innerHTML += `<span class="width"></span>`)
+            
+            const elFlexbox = document.querySelector('.flex-container')
+            const style = getComputedStyle(elFlexbox)
+            
+            updateWidth()
+
+            if(style.display !== 'flex'){
+                elFlexbox.classList.add('hidden')
+                return
+            } else {
+                elFlexbox.classList.remove('hidden')
+            }
+
+            if(style.flexDirection === 'column' || style.flexDirection === 'column-reverse'){
+                elFlexbox.classList.add('column')
+            } else {
+                elFlexbox.classList.remove('column')
+            }
+        }
+
+        function updateWidth(){
+            var elWidths = document.querySelectorAll('.width')
+            elWidths.forEach(el => el.innerText = el.parentElement.offsetWidth + 'px')
+        }
+    </script>
+</body>
+</html>

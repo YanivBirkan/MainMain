@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #dddddd;
+  /* height: 100vh; */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px 500px 150px;
+  grid-template-rows: 100px 50px 400px 50px;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "aside  main ad"
+    "footer footer footer";
+  /* gap: 10px; */
+  background-color: #dddddd;
+  width: max-content;
+  margin: 100px auto;
+}
+
+.grid-container > * {
+  font-size: 2em;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (width < 800px) {
+  .grid-container {
+    grid-template-columns: 70px 300px 100px;
+    grid-template-rows: 50px 300px 150px 50px;
+    grid-template-areas:
+      "header header header"
+      "nav main  main"
+      "nav aside ad"
+      "footer footer footer";
+  }
+}
+@media (width < 500px)  {
+    .grid-container {
+    grid-template-columns: 180px 180px;
+    grid-template-rows: 80px 50px 150px 50px;
+    grid-template-areas:
+      "header header "
+      "nav nav"
+      "main main"
+      "aside ad"
+      "footer footer";
+  }
+}
+
+header {
+  grid-area: header;
+  background-color: gray;
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(67, 130, 151);
+}
+aside {
+  grid-area: aside;
+  background-color: aqua;
+}
+
+.ad {
+  grid-area: ad;
+  background-color: rgb(203, 163, 69);
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(39, 75, 63);
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(211, 141, 71);
+}

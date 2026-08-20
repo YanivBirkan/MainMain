@@ -1,0 +1,18 @@
+p {
+    margin-block-start: 3rem;
+    font-style: italic;
+    font-family: monospace;
+}
+
+p:last-of-type {
+    margin-block-start: 6rem;
+}
+
+.reference {
+    display: flex;
+    align-items: center;
+}
+
+.reference a:is(:nth-child(2), :nth-child(4), :last-child) {
+    margin-inline-start: auto;
+}

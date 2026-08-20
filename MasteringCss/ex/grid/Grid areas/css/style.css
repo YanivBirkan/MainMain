@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #dddddd;
+    height: 90vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5,100px);
+    grid-template-rows: repeat(5,100px) ; 
+        /* grid-template-areas: 
+        "header header"
+        "aside  main"
+        "ad     main"
+        "footer footer"; */
+    /* gap: 10px; */
+    justify-content: center;
+    margin-block-start: 100px;
+
+    /* height: 100%;
+    margin: 5vh 5vw; */
+    gap: 1px;
+    place-items: center,center;
+    background-color: rgb(213, 213, 213); 
+
+}
+.grid-container > *{
+    outline: solid gray;
+    background-color: aqua;
+
+}
+
+
+.item1{
+    grid-area: 1/1/span 2/span 2;}
+
+.item2{
+    grid-column: 4 /span 2;
+    grid-row: 1;
+    /* grid-area: 1/4/span 1/span 2; */
+}
+.item3{
+    grid-column: 3 / span 3;
+    grid-row: 2 / span 1;
+    /* grid-area: 2/3/span 1/span 3; */
+}
+.item4{
+    grid-column: 5 / span 1;
+    grid-row: 3 / span 2;
+    /* grid-area: 3/5/span 2/span 1; */
+}
+.item5{
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 2;
+    /* grid-area: 3/1/span 2/span 3; */
+}
+.item6{
+    grid-row: 5 / span 1;
+    grid-column: 1 / -1;
+}
+
+@media (width < 992px) {
+
+    .grid-container {
+        grid-template-areas: 
+            "header header"
+            "main   main"
+            "ad     aside"
+            "footer footer";
+    }
+
+}
+
+@media (width < 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr 2fr 2fr 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "aside"
+            "ad"
+            "footer";
+    }
+
+}
+
+.grid-container > * {
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+    background-color: lightblue;
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(140, 170, 42);
+}
+
+.ad {
+    grid-area: ad;
+    background-color: rgb(129, 103, 158);
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(42, 170, 163);
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(39, 75, 63);
+}

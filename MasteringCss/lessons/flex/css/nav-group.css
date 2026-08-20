@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+
+    padding: 10px;
+    margin-block: 10px;
+    background-color: rgb(146, 192, 200);
+}
+
+a:nth-child(2), a:nth-child(4), a:last-child {
+    margin-inline-start: auto;
+}
+
+.logo {
+    font-family: monospace;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+a:last-child {
+    margin-inline-end: 0;
+}
+
+a {
+    margin-inline-end: 1.5em;
+    color: rgb(116, 116, 116);
+    text-decoration: none;
+}

@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  /* position: relative; */
+  /* margin: 0 1em; */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  color: #777;
+}
+html {
+  scroll-behavior: smooth;
+}
+header,
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-inline: 10px;
+  margin-block-end: 10px;
+  background-color: rgb(146, 192, 200);
+}
+header {
+  position: sticky;
+  top: 0;
+}
+footer {
+  position: sticky;
+  bottom: 0;
+}
+.logo {
+  font-family: monospace;
+  font-size: 2em;
+  font-weight: bold;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+header a {
+  text-decoration: none;
+  color: #777;
+}
+
+/* main {
+    padding-inline: 1em;
+} */
+
+.sticky-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+.sticky-container .text {
+  flex-basis: 60%;
+}
+
+.sticky-container .text {
+  text-align: justify;
+}
+.sticky-container .text p {
+  padding-block-end: 2em;
+  border-block-end: 1px solid lightgrey;
+  margin-block-start: 1em;
+}
+.sticky-card {
+  position: sticky;
+  top: 15vh;
+  /* bottom: 50px; */
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px #cfcfcf;
+  width: 240px;
+  height: max-content;
+  /* min-height: 260px; */
+  margin-inline: auto;
+}
+.sticky-card h2 {
+  margin-block-start: 0;
+  margin-block-end: 0.5em;
+
+  color: rgb(146, 146, 146);
+  text-align: justify;
+}
+.sticky-card h3 {
+  margin-block-start: 0;
+  margin-block-end: 0.5em;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  color: rgb(192, 192, 192);
+  font-weight: 100;
+}
+.sticky-card p {
+  margin-block-start: 2em;
+
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 0.82em;
+  color: rgb(192, 192, 192);
+  text-align: justify;
+}
+.sticky-card button {
+  height: 2.5em;
+  margin-block-start: auto;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  font-weight: bold;
+
+  background-color: rgb(255, 195, 83);
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  box-shadow: 1px 1px 6px #cfcfcf;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out;
+}
+
+.backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  /* width: 90%; */
+  min-width: 40vw;
+  height: 25vh;
+  background-color: white;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5em;
+  grid-template-areas:
+   "item1 item2 item2"
+   "item1 item3 item4"
+   "item5 item5 item4";
+   /* grid-area: 1/1; */
+  align-items: center;
+  padding: 2em;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+}
+
+.modal .item {
+    margin: 0;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;            
+    justify-content: center;  
+    align-items: center; 
+}
+
+.item1{
+    grid-area: item1;
+    background-color: aqua;
+}
+.item2{
+    grid-area: item2;
+    background-color: gray;
+}
+.item3{
+    grid-area: item3;
+    background-color: aqua;
+}
+.item4{
+     grid-area: item4;
+    background-color: aqua;
+}
+.item5{
+     grid-area: item5;
+    background-color: gray;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border: 2px solid lightgrey;
+  border-radius: 50%;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: #333;
+  padding: 0.2em 0.6em;
+  cursor: pointer;
+}
+
+.btn-rnd{
+    border: 2px solid lightgrey;
+    border-radius: 50%;
+    grid-area: item3;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: #333;
+    padding: 0.2em 0.6em;
+    cursor: pointer;  
+    height: 1em;
+    width: 1em;
+    /* margin: auto; */
+    align-self: center;
+    justify-self: center;
+}

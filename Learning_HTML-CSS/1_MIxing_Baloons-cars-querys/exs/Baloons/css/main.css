@@ -1,0 +1,26 @@
+.baloon{
+    width: 100px;
+    height: 150px;
+    margin: auto;
+    bottom: 20px;
+    position: absolute;
+    border-radius: 90% 90% 90% 90%;
+    box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.3);
+    opacity: 1
+}
+h1{
+    text-align: center;
+}
+.baloon-1{
+    background-color: red;
+    left: 200px;
+
+}
+.baloon-2{
+    background-color: blue;
+    left: 400px;
+}
+.baloon-3{
+    background-color: yellow;
+    left: 600px;
+}

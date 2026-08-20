@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: #777;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; /* Pushes footer to bottom if page has little content */
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Keeps it on top of scrolling content */
+}
+footer{
+      position: sticky;
+  bottom: 0;
+  z-index: 1000;
+}
+html{
+    scroll-behavior: smooth ;
+}
+header, footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+    margin-block: 10px;
+    background-color: rgb(146, 192, 200);
+}
+.logo {
+    font-family: monospace;
+    font-size: 2em;
+    font-weight: bold;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+header a {
+    text-decoration: none;
+    color: #777;
+}
+
+main {
+    padding-inline: 1em;
+}
+
+.sticky-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.sticky-container .text{
+    flex-basis: 60%;
+}
+
+.sticky-container .text {
+    text-align: justify;
+}
+.sticky-container .text p {
+    padding-block-end: 2em;
+    border-block-end: 1px solid lightgrey;
+    margin-block-start: 1em;
+}
+.sticky-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px #cfcfcf;
+    width: 240px;
+    min-height: 260px;
+    margin-inline: auto ;
+}
+.sticky-card h2 {
+    margin-block-start: 0;
+    margin-block-end: .5em;
+
+    color:rgb(146, 146, 146);
+    text-align: justify;
+}
+.sticky-card h3 {
+    margin-block-start: 0;
+    margin-block-end: .5em;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .75em;
+    color:rgb(192, 192, 192);
+    font-weight: 100;
+}
+.sticky-card p {
+    margin-block-start: 2em;
+
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: .82em;
+    color:rgb(192, 192, 192);
+    text-align: justify;
+
+}
+.sticky-card button {
+    height: 2.5em;
+    margin-block-start: auto;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: bold;
+    
+    background-color: rgb(255, 195, 83);
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px #cfcfcf;
+}
+.backdrop {
+    background-color: rgb(177, 177, 177, .6);
+    
+    opacity: 0;
+    transition: opacity .8s ease-out;
+}
+.modal {
+    padding: 1em;
+    
+    background-color: rgb(252, 252, 252);
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgb(173 173 173);
+    
+    opacity: 0;
+    transition: opacity .8s ease-out;
+}
+.modal .btn-close{
+    border: 2px solid lightgrey;
+    box-shadow: 3px 3px 6px rgb(173 173 173);
+}

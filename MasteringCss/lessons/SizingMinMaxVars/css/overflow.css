@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(78, 120, 133, 0.678);
+}
+
+h1 {
+    width: max-content;
+    margin: 100px auto;
+    
+    color: beige;
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* text-align: center; */
+}
+
+/* :Start by bringing in the paragraph width to show the difference */
+
+p {
+    width: 300px;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    background-color: whitesmoke;
+
+    border: 2px solid orange;
+    margin: auto;
+
+    /* :Then bring these in 1 by 1 */
+
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    
+    /* :Then use these instead of the overflow: shorthand above */
+
+    overflow-x: scroll;
+
+    overflow-y: hidden;
+    overflow-y: clip;
+
+    /* color: lightgray;
+    color: momo; */
+}
