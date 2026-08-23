@@ -9,12 +9,11 @@ function onBallCLick(elBall){
         elBall.innerText = elBall.style.width;
     }
     else{
-        setTimeout(function(){
+            elBall.style.transition = "all 1s ease";
             newSize = 100;
             elBall.style.width = newSize + "px";
             elBall.style.height = newSize + "px";
             elBall.innerText = elBall.style.width;
-        },1000)
     }
     
 }
