@@ -13,6 +13,9 @@ h1{
     border-radius: 50%;
     background-color: aqua;
     margin: 3rem auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
 
 }
 table{
