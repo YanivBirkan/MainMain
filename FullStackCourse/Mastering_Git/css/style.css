@@ -2,10 +2,18 @@
     box-sizing: border-box;
 }
 body{
-    text-align: center;
+    background-color: black;
 }
 h1{
-    font-size: 50px;
+    color: white;
+}
+.ball{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aqua;
+    margin: 3rem auto;
+
 }
 table{
     border: 1px solid lightgray;
