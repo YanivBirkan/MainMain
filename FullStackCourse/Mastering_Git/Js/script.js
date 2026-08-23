@@ -2,9 +2,19 @@ function onBallCLick(elBall){
     console.log("ball clicked");
     const currentWidth = parseInt(elBall.style.width) || 100;
     
-    const newWidth = currentWidth + 50;
-    elBall.style.width = newWidth + "px";
-    elBall.style.height = newWidth + "px";
-    elBall.innerText = elBall.style.width;
+    let newSize = currentWidth + 50;
+    if(newSize<400){
+        elBall.style.width = newSize + "px";
+        elBall.style.height = newSize + "px";
+        elBall.innerText = elBall.style.width;
+    }
+    else{
+        setTimeout(function(){
+            newSize = 100;
+            elBall.style.width = newSize + "px";
+            elBall.style.height = newSize + "px";
+            elBall.innerText = elBall.style.width;
+        },1000)
+    }
     
 }
