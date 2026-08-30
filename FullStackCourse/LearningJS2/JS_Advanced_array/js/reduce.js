@@ -43,8 +43,8 @@ function collectiveExperience(){
     return collectiveExp
 }
 
-function countEmpsInDepartment(){
-    const depNums= emps.reduce((acc,emp)=>{
+function countEmpsInEachDepartment(){
+    const depNums = emps.reduce((acc,emp)=>{
         if(!acc[emp.department]) acc[emp.department]=0;
         acc[emp.department]++;
         return acc
@@ -52,7 +52,15 @@ function countEmpsInDepartment(){
     return depNums
 }
 
-console.log(countEmpsInDepartment())
+function groupByExperience(){
+    const empByExp = emps.reduce((acc,emp)=>{
+        if(!acc[emp.yearsExperience]) acc[emp.yearsExperience] = [];
+        acc[emp.yearsExperience].push(emp)
+        return acc
+    },{});
+    return empByExp 
+}
+console.log(groupByExperience())
 // console.log(sumAllExperience())
 
 

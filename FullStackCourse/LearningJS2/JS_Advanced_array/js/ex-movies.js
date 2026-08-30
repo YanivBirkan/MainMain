@@ -15,10 +15,12 @@ function deleteMovie(imdb){
 }
 
 function sortByName(){
+    
     return gMovies.sort((m1,m2)=> m1.name.localeCompare(m2.name))
 }
 
 function sortByRate(){
+    debugger
     return gMovies.sort((m1,m2) => m1.rate-m2.rate)
 }
 
