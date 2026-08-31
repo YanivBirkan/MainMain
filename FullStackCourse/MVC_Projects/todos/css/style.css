@@ -8,7 +8,7 @@ body{
 h1{
     text-align: center;
 }
-.todo-list{
+.todo-list , .todo-filter{
     background-color:#fff;
     padding: 10px 30px;
     /* margin: 5px 50px; */
