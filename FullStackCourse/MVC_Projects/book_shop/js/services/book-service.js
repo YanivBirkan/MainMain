@@ -32,6 +32,19 @@ function addBook(title,price){
     _saveBooks()
 
 }
+function showFlashMessage(text, isDanger = false) {
+    const msgEl = document.querySelector('.user-msg');
+    msgEl.innerText = text;
+    if (isDanger) {
+        msgEl.classList.add('danger');
+    } else {
+        msgEl.classList.remove('danger');
+    }
+    msgEl.classList.add('open');
+    setTimeout(() => {
+        msgEl.classList.remove('open');
+    }, 2000);
+}
 function renderSelectedBookDetails(id){
     const book = gBooks.find(book=> book.id===id);
     return `
@@ -47,6 +60,16 @@ function renderSelectedBookDetails(id){
             </div>
     `
 }
+function getAllBooksPrices(){
+    let newBookPrices = gBooks.map(book=> Number(book.price))
+    return newBookPrices.reduce((acc,price) =>{
+        if(price<80) acc.cheap++    
+        if(price>80 && price<200) acc.avarage++    
+        if(price>200) acc.expensive++    
+        return acc
+    },{cheap: 0 , avarage: 0 , expensive: 0 });
+}
+
 //local storage:
 function _createBooks(){
     gBooks= loadFromStorage(STORAGE_KEY);

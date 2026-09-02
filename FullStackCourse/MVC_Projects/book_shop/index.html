@@ -9,18 +9,25 @@
   </head>
   <body onload="onInit()">
     <h1>The Book Shop</h1>
-    <section class="main-table">
-        <div class="filtering-div">
-            
+    <div class="filtering-div">
+        <input type="text" class="book-search-input" placeholder="Search books by title..." oninput="onSetSearch(this)">
+        <div class="layout-controls">
+            <button type="button" class="btn btn-layout" onclick="onSetLayoutView('table')">📋 Table View</button>
+            <button type="button" class="btn btn-layout" onclick="onSetLayoutView('grid')">📱 Grid View</button>
         </div>
-        <table class="book-table">
-        </table>
-    </section>
-    <section class="add-book-sect">
-        <div class="add-book-div">
-            <button type="button" title="btn" class="btn btn-add" onclick="ShowAddModal()">Add a new Book</button>
-        </div>
-    </section>
+    </div>
+    <div class="books-display-container">
+        <section class="main-table">
+
+            <table class="book-table">
+            </table>
+        </section>
+    </div>
+<section class="add-book-sect">
+            <div class="add-book-div">
+                <button type="button" title="btn" class="btn btn-add" onclick="ShowAddModal()">Add a new Book</button>
+            </div>
+        </section>
     <!-- modal1: -->
     <div class="backdrop1">
         <section class="modal book-Add">
@@ -55,4 +62,15 @@
     <script src="js/services/book-service.js"></script>
     <script src="js/controler.js"></script>
   </body>
+      <footer class="statics-sect">
+        <div class="statics-sect-div">
+            <h3>Cheap Books:<span class="cheap-books-num">0</span></h3>
+            <h3>Average Books:<span class="avg-books-num">0</span></h3>
+            <h3>expensive Books:<span class="exp-books-num">0</span></h3>
+        </div>
+        
+    </footer>
+  <!-- succes messege: -->
+   <div class="user-msg"></div>
+
 </html>

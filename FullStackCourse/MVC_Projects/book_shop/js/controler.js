@@ -1,41 +1,92 @@
 const backdrop1 = document.querySelector('.backdrop1');
 const backdrop2 = document.querySelector('.backdrop2');
+let gSearchQuery = ''; 
+let gLayoutView = localStorage.getItem('bookLayoutPref') || 'table';
 
 function onInit(){
     renderBookTable()
 }
-//first book table render
+
 function renderBookTable(){
-    let strHtml = `<th>Title</th>
-            <th>Price</th>
-            <th>Actions</th>
-            `;
-    //  gBooks;
-    let books = gBooks.map(book=>{
-        return `
+    const booksToDisplay = gBooks.filter(book => {
+        return book.title.toLowerCase().includes(gSearchQuery);
+    });
+    const container = document.querySelector(".books-display-container");
+        // 2. Check if the active filter returns an empty set
+    if (booksToDisplay.length === 0) {
+        container.innerHTML = `<div class="no-results-box" style="height:200px; display:flex; justify-content:center; align-items:center;">No books found matching your search.</div>`;
+        return;
+    }
+    let strHtml=``;
+    // 3. Render Table Template Layout
+    if (gLayoutView === 'table') {
+        strHtml = `<table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>`;
+
+        strHtml += booksToDisplay.map(book => `
             <tr>
                 <td>${book.title}</td>
-                <td>${book.price}</td>
-                <td class='actions'><button type='button' title='btn' class='btn btn-Read' onclick="ShowDetailsModal('${book.id}',event)">Read</button>
-                    <button type='button' title='btn' class='btn btn-Update' onclick="onUpdateBook('${book.id}',event)">Update</button>
-                    <button type='button' title='btn' class='btn btn-Delete' onclick="onRemoveBook('${book.id}' ,event)">Delete</button>
+                <td>$${book.price}</td>
+                <td class="actions">
+                    <button type="button" class="btn btn-Read" onclick="ShowDetailsModal('${book.id}', event)">Read</button>
+                    <button type="button" class="btn btn-Update" onclick="onUpdateBook('${book.id}', event)">Update</button>
+                    <button type="button" class="btn btn-Delete" onclick="onRemoveBook('${book.id}', event)">Delete</button>
                 </td>
             </tr>
-            `
-    }).join('');
-    if(books.length==0) {strHtml+=`
-        <tr class="noResult-row">
-            <td colspan="4" rowspan="4">No matching book were found...</td>   
-        </tr>
-        `
-    }
-    else{
-        strHtml+=books;
+        `).join('');
 
+        strHtml += `</tbody></table>`;
+        container.innerHTML = strHtml;
+    } 
+    
+    // 4. Render Grid Card Template Layout
+    else if (gLayoutView === 'grid') {
+    strHtml = `<div class="books-card-grid">`;
+
+        strHtml += booksToDisplay.map(book => `
+            <div class="book-card">
+                <img src="${book.imgUrl}" class="card-img" alt="Book Image">
+                <div class="card-info">
+                    <h3>${book.title}</h3>
+                    <p class="card-price">Price: $${book.price}</p>
+                    <div class="card-actions">
+                        <button type="button" class="btn btn-Read" onclick="ShowDetailsModal('${book.id}', event)">Read</button>
+                        <button type="button" class="btn btn-Update" onclick="onUpdateBook('${book.id}', event)">Update</button>
+                        <button type="button" class="btn btn-Delete" onclick="onRemoveBook('${book.id}', event)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+        strHtml += `</div>`;
+        container.innerHTML = strHtml;
     }
-    document.querySelector(".book-table").innerHTML=strHtml;
+    // strHtml += `</tbody>`;
+    // document.querySelector(".book-table").innerHTML = strHtml;
+    // document.querySelector(".book-table").innerHTML=strHtml;
+    let booksPrices = getAllBooksPrices();
+    document.querySelector(".cheap-books-num").innerText = booksPrices.cheap;
+    document.querySelector(".avg-books-num").innerText = booksPrices.avarage;
+    document.querySelector(".exp-books-num").innerText = booksPrices.expensive;
+
+
 }
-
+function onSetLayoutView(viewType) {
+    gLayoutView = viewType;
+    localStorage.setItem('bookLayoutPref', viewType); 
+    renderBookTable(); 
+}
+function onSetSearch(textInput) {
+    gSearchQuery = textInput.value.toLowerCase().trim(); 
+    renderBookTable(); 
+}
 function onRemoveBook(id,ev){
     ev.stopPropagation();
     removeBook(id);
@@ -56,6 +107,7 @@ function onAddBook(){
     addBook(newBookTitle, newBookPrice);
     closeModal()
     renderBookTable()
+    showFlashMessage("Book added successfully!");
     document.querySelector(".newBook-title-input").value ="";
     document.querySelector(".newBook-price-input").value ="";
 }
