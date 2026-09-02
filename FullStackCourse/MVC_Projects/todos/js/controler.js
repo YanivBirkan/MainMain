@@ -15,6 +15,7 @@ function renderTodos() {
             </li>`;
   });
   document.querySelector(".todo-list").innerHTML = strHtmls.join("");
+  renderStat();
 }
 
 function onToggleTodo(id) {
@@ -43,4 +44,12 @@ function onAddTodo() {
 function onSetFilter(filterBY) {
   setFilter(filterBY)
   renderTodos()
+}
+
+
+//stats:
+function renderStat(){
+  document.querySelector(".total-todos-count").innerText = getTotalTodosCount();
+
+  document.querySelector(".active-todos-count").innerText = getActiveTodosCount();
 }

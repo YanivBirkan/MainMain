@@ -22,8 +22,15 @@
         <input class="todo-input" type="text" name="todo-txt" placeholder="Add a new todo">
         <button onclick="onAddTodo()" title="btn" class="add-btn">Add</button>
     </section>
-    <script src="js/services/todo-service.js"></script>
+    <section clas="todo-start">
+      <h3>Total Todos: <span class="total-todos-count"></span></h3>
+      <h3>Active Todos: <span class="active-todos-count"></span></h3>
+
+    </section>
     <script src="js/services/util.js"></script>
+    <script src="js/services/storage-services.js"></script>
+
+    <script src="js/services/todo-service.js"></script>
     <script src="js/controler.js"></script>
   </body>
 </html>
