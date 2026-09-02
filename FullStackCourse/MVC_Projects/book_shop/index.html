@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Book Shop</title>
+  </head>
+  <body onload="onInit()">
+    <h1>The Book Shop</h1>
+    <section class="main-table">
+        <div class="filtering-div">
+            
+        </div>
+        <table class="book-table">
+        </table>
+    </section>
+    <section class="add-book-sect">
+        <div class="add-book-div">
+            <button type="button" title="btn" class="btn btn-add" onclick="ShowAddModal()">Add a new Book</button>
+        </div>
+    </section>
+    <!-- modal1: -->
+    <div class="backdrop1">
+        <section class="modal book-Add">
+            <h2>Enter new Book details:</h2>
+                <button onclick="closeModal(event)" class="btn-close">x</button>
+
+            <div class="add-modal-div-inputs">
+                <div class="input-group">
+                    <label for="bookTitle">Book Title:</label>
+                    <input type="text" class="newBook-title-input" placeholder="Add a new Book Title">
+                </div>
+
+                <div class="input-group">
+                    <label for="bookPrice">Book Price:</label>
+                    <input type="number" class="newBook-price-input" placeholder="Add a new Book Price">
+                </div>
+            </div>
+            <button type="button" title="btn" class="btn btn-add" onclick="onAddBook()">Add a new Book</button>
+        </section>
+   </div>
+    <!-- modal2: -->
+    <div class="backdrop2">
+        <section class="modal book-details">
+                <button onclick="closeModal2(event)" class="btn-close">x</button>   
+            <section class="book-details book-details-text">
+            </section>
+        </section>
+   </div>
+   <!-- js scripts: -->
+    <script src="js/services/util.js"></script>
+    <script src="js/services/storage-services.js"></script>
+    <script src="js/services/book-service.js"></script>
+    <script src="js/controler.js"></script>
+  </body>
+</html>

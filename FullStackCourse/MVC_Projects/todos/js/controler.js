@@ -14,6 +14,7 @@ function renderTodos() {
                 <button onclick="onRemoveTodo('${todo.id}',event)" title="btn" class='remove-btn'>X</button>
             </li>`;
   });
+  debugger
   document.querySelector(".todo-list").innerHTML = strHtmls.join("");
   renderStat();
 }
