@@ -9,6 +9,44 @@
   </head>
   <body onload="onInit()">
     <h1>The Book Shop</h1>
+<section class="book-filter">
+        <fieldset>
+            <legend>Filter & Sorting</legend>
+
+            <div class="filter-by">
+                <input oninput="onSetFilterBy({ title: this.value })" placeholder="book title" type="text" class="book-search-input"  >
+                <label>
+                    <span>Min rating:</span>
+                    <input type="range" min="0" max="5" value="1"
+                        onchange="this.title=this.value;onSetFilterBy({ rating: +this.value })" />
+                </label>
+            </div>
+
+            <div class="sort-by">
+                <select title="se" class="sort-select" onchange="onSetSortBy()">
+                    <option value="title">title</option>
+                    <option value="price">price</option>
+                    <option value="rating">rating</option>
+                </select>
+                <div>
+                    <label>
+                        <span>accending</span>
+                        <input class="sort-acc" type="checkbox" oninput="onSetSortBy()" />
+                    </label>
+                    <label>
+                        <span>Descending</span>
+                        <input class="sort-desc" type="checkbox" oninput="onSetSortBy()" />
+                    </label>
+                </div>
+                
+            </div>
+            <div >
+                <button onclick="onclear()">Clear Sorting</button>
+            </div>
+        </fieldset>
+    </section>
+
+
     <div class="filtering-div">
         <input type="text" class="book-search-input" placeholder="Search books by title..." oninput="onSetSearch(this)">
         <div class="layout-controls">

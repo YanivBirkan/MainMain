@@ -8,6 +8,30 @@ h1 {
 text-align: center;
 }
 
+
+.book-filter {
+	background-color: rgb(96, 122, 158);
+	padding: 20px;
+	margin: 20px auto;
+  width: 600px;
+  align-items: center;
+}
+
+.book-filter fieldset {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.book-filter .filter-by,
+.book-filter .sort-by {
+	display: grid;
+  text-align: center;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+
 /* table: */
 .main-table , .books-display-container {
 width: Max(100% , 440px);
@@ -65,8 +89,12 @@ margin: 5px auto;
     padding-inline: 100px;
     padding-block: 3px;
 }
+fieldset div{
+  margin-inline: 10px ;
+}
+
 input[type="text"],
-input[type="number"] {
+input[type="number"] , select{
 /* width: 100%; */
 padding: 12px;
 margin: 10px 0;

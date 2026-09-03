@@ -33,7 +33,8 @@ function create2Books(){
         title: 'The Adventure of aaa',
         price: 120,
         imgUrl: imgsSrc[getRandomInt(0,5)],
-        details:fixedLorem(getRandomInt(40,70))
+        details:fixedLorem(getRandomInt(40,70)),
+        rating: 3
 
     }, 
     {
@@ -41,7 +42,8 @@ function create2Books(){
         title: 'My World Atlas',
         price: 80,
         imgUrl: imgsSrc[getRandomInt(0,5)],
-        details:fixedLorem(getRandomInt(40,70))
+        details:fixedLorem(getRandomInt(40,70)),
+        rating: 3
 
     }  
   ];
