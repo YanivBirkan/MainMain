@@ -3,31 +3,32 @@ const backdrop2 = document.querySelector('.backdrop2');
 let gSearchQuery = ''; 
 let gLayoutView = localStorage.getItem('bookLayoutPref') || 'table';
 
+//for filtering
 let gQueryOptions = {
     filterBy: { title: '', rating: 0 },
     sortBy: {},
-    page: { idx: 0, size: 6 }
+    page: { idx: 0, size: 4 }
 }
-
-
-
+//get query params and render
 function onInit(){
+    readQueryParams()
     renderBookTable()
 }
 
 function renderBookTable(){
+    //render by filtering from service
     const booksToDisplay = getBooks(gQueryOptions)
     // const booksToDisplay = gBooks.filter(book => {
     //     return book.title.toLowerCase().includes(gSearchQuery);
     // });
     const container = document.querySelector(".books-display-container");
-        // 2. Check if the active filter returns an empty set
+    //no match result
     if (booksToDisplay.length === 0) {
         container.innerHTML = `<div class="no-results-box" style="height:200px; display:flex; justify-content:center; align-items:center;">No books found matching your search.</div>`;
         return;
     }
     let strHtml=``;
-    // 3. Render Table Template Layout
+    // Render as Table
     if (gLayoutView === 'table') {
         strHtml = `<table>
             <thead>
@@ -57,8 +58,7 @@ function renderBookTable(){
         strHtml += `</tbody></table>`;
         container.innerHTML = strHtml;
     } 
-    
-    // 4. Render Grid Card Template Layout
+    // Render as Grid
     else if (gLayoutView === 'grid') {
     strHtml = `<div class="books-card-grid">`;
 
@@ -81,9 +81,7 @@ function renderBookTable(){
         strHtml += `</div>`;
         container.innerHTML = strHtml;
     }
-    // strHtml += `</tbody>`;
-    // document.querySelector(".book-table").innerHTML = strHtml;
-    // document.querySelector(".book-table").innerHTML=strHtml;
+    //num of book prices
     let booksPrices = getAllBooksPrices();
     document.querySelector(".cheap-books-num").innerText = booksPrices.cheap;
     document.querySelector(".avg-books-num").innerText = booksPrices.avarage;
@@ -115,6 +113,7 @@ function onUpdateBook(id,ev){
 function onAddBook(){
     let newBookTitle = document.querySelector(".newBook-title-input").value;
     let newBookPrice = document.querySelector(".newBook-price-input").value;        
+    //validation
     if (!newBookTitle) return; 
     if (!newBookPrice || isNaN(newBookPrice) || Number(newBookPrice) <= 0) return;
     addBook(newBookTitle, newBookPrice);
@@ -124,6 +123,9 @@ function onAddBook(){
     document.querySelector(".newBook-title-input").value ="";
     document.querySelector(".newBook-price-input").value ="";
 }
+
+
+
 //modal functions
 function ShowAddModal(id,event){
     backdrop1.classList.add('show');
@@ -194,15 +196,33 @@ function onSetSortBy() {
     setQueryParams()
 }
 
+//Pages:
 function onNextPage() {
     // console.log('Getting next page...')
 
     const pageCount = getPageCount(gQueryOptions)
-
+    
     if (gQueryOptions.page.idx === pageCount - 1) {
+        debugger
         gQueryOptions.page.idx = 0
     } else {
         gQueryOptions.page.idx++
+    }
+
+    // console.log('gQueryOptions.page:', gQueryOptions.page)
+    renderBookTable()
+    setQueryParams()
+}
+function onPrevPage() {
+    // console.log('Getting next page...')
+
+    const pageCount = getPageCount(gQueryOptions)
+    
+    if (gQueryOptions.page.idx === 0) {
+        debugger
+        gQueryOptions.page.idx = pageCount -1
+    } else {
+        gQueryOptions.page.idx--
     }
 
     // console.log('gQueryOptions.page:', gQueryOptions.page)

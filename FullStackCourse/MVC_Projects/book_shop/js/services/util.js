@@ -14,7 +14,7 @@ function fixedLorem(count) {
     // Create an array of the requested size, pulling words by wrapping around with modulo (%)
     return Array.from({ length: count }, (_, i) => words[i % words.length]).join(' ');
 }
-
+//random img srcs
 
 const imgsSrc = [
   "https://cdn-icons-png.flaticon.com/512/2232/2232688.png",
@@ -25,7 +25,7 @@ const imgsSrc = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWpFChWjK6ClJ27GDA8f0iyug6UdMc5Ho5f2CYJJqSg&s=10"
 ]
 
-
+//create 2 books for all books was removed
 function create2Books(){
   return[
     {
