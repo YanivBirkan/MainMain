@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777;
+}
+p:nth-of-type(2) {
+    background-color: lightblue;
+    padding: 10px;
+}
+.box {
+    color: #ddd;
+    padding: 10px;
+    margin-inline-start: 20px;
+    border: 1px solid lightgray;
+}
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: darkcyan;
+
+    float: left;
+}
+.box2 {
+    width: 120px;
+    height: 120px;
+    background-color: darkseagreen;
+
+    float: left;
+    /* float: right; */
+}
+.box3 {
+    width: 140px;
+    height: 140px;
+    background-color: darkslategrey;
+
+    float: left;
+    clear: left;
+}
+.box4 {
+    width: 160px;
+    height: 160px;
+    background-color: darkorange;
+
+    float: left;
+}

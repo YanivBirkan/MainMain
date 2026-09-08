@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    /* margin: 0; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+p:first-of-type {
+    /* column-count: 4; */
+    column-span: all;
+}
+
+.main-container {
+    /* column-count: 4;
+    column-width: 220px; */
+    columns: 4 220px;
+    column-rule: 1px solid lightgrey;
+    column-gap: 2em;
+}
+
+img {
+    width: 100%;
+}
+
+.simple-form {
+    display: grid;
+    place-items: start;
+    height: 300px;
+
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid lightgrey;
+    break-inside: avoid;
+}
+
+button {
+    justify-self: end;
+}

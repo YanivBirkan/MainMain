@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    text-align: justify;
+    color: #777;
+}
+h1 {
+    margin-inline: 13vw;
+}
+.img1 {
+    float: left;
+    shape-outside: circle(44%);
+    width: 300px;
+    margin-inline-end: 1em;
+}
+.img2 {
+    float: right;
+    shape-outside: ellipse();
+    width: 230px;
+    margin-inline: 1.3em;
+}
+p {
+    margin-inline: 13vw;
+}
