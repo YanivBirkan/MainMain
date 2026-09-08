@@ -1,0 +1,4 @@
+examples:
+cars for cards and display them better
+float for text near img
+min max to control width of cards - if the view is bigger than get another card to the line

@@ -1,0 +1,103 @@
+*  {
+    box-sizing: border-box;
+}
+
+:root {
+    --spacer: .25rem;
+
+    --spacer-m: calc(2 * var(--spacer));
+    --spacer-l: calc(3 * var(--spacer));
+    --spacer-xl: calc(4 * var(--spacer));
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #535353;
+}
+
+p, h1, h2, h3, h4, h5, h6, body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: var(--spacer-xl);
+    background: linear-gradient(lightgray, transparent);
+}
+
+
+main {
+    padding: var(--spacer-xl);
+    column-count: 4;
+    column-width: 220px;
+    /* columns: 4 220px; */
+    /* make maximum 4 card of 220px if feats less */
+}
+
+.card {
+    display: grid;
+    position: relative;
+
+    break-inside: avoid;
+    
+    border: 1px solid lightgray;
+    border-radius: var(--spacer-xl);
+    padding: var(--spacer-xl);
+    margin-block-end: var(--spacer-xl);
+
+    color: #aaa;
+}
+
+.card hgroup h2 {
+    margin-block-end: var(--spacer-m);
+}
+
+.card hgroup p {
+    margin-block-end: 
+        calc(var(--spacer-xl) + var(--spacer-m));
+    font-size: .9em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card img {
+    /* positioning in right top corner */
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+    width: 40%;
+    z-index: -1;
+}
+
+.card > p {
+    margin-block-end: var(--spacer-xl);
+    font-size: .9em;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+/* styling bottom of card for the price and button + space between */
+.card .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta button {
+    padding: .5em;
+    border: 1px solid lightgrey;
+    border-radius: .6em;
+    font-size: .75em;
+    letter-spacing: 1px;
+}
+
+.cta .price {
+    font-size: .9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
