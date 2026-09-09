@@ -1,0 +1,42 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background-color: #444;
+}
+
+.loader {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+}
+
+.dot {
+    --animation-duration: 1.5s;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    
+    /* animation: scale var(--animation-duration) infinite linear; */
+}
+
+@keyframes scale {
+    30% { scale: 1; }
+    50% { scale: 1.5; }
+    80% { scale: 1; }
+}
+
+/* .loader :nth-child(2) h*/
+.dot:nth-child(2){
+    animation-delay: calc(var(--animation-duration) / 5);
+}
+
+.dot:nth-child(3){
+    animation-delay: calc(var(--animation-duration) / 5 * 2);
+}
