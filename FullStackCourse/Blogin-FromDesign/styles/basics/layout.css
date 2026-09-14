@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 16px 1fr 16px;
 }
-
+/* all elemnts in main layout/middle */
 .main-layout>*:not(.full) {
     grid-column: 2;
 }
