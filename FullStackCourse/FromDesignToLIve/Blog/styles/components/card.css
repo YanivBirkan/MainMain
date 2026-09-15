@@ -1,0 +1,31 @@
+.card{
+    display: flex;
+    flex-direction: row ;
+}
+.card-content{
+    flex-direction: column;
+}
+.card p {
+    margin-bottom: 19px;
+}
+.card .card-image {
+    margin: 20px;
+    width: 460px;
+    height: 300px;
+}
+
+.card .card-tag {
+    font-family: eurofurence, sans-serif;
+    text-transform: uppercase;
+    color: var(--clr-primary-2);
+    margin-bottom: 1.25rem;
+    font-size: 1.8em;
+    margin-block-start: 2rem;
+}
+.card button{
+    width: 190px;
+    height: 43px;
+    border: none;
+    background-color: #fff;
+    color: var(--clr-primary-base);
+}

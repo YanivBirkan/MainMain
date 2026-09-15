@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: playfair;
-    src: url('/Blogin-FromDesign/fonts/playfair/PlayfairDisplay-Regular.ttf');
+    src: url('FromDesignToLIve/ClassEx_Cards_Resposive_Hambur/fonts/playfair/PlayfairDisplay-Regular.ttf');
 }
 
 
@@ -10,12 +10,12 @@
 
 @font-face {
     font-family: ubuntu;
-    src: url('/Blogin-FromDesign/fonts/ubuntu/Ubuntu-Light.ttf');
+    src: url('FromDesignToLIve/ClassEx_Cards_Resposive_Hambur/fonts/ubuntu/Ubuntu-Light.ttf');
 }
 
 /* Inconsolata  */
 
 @font-face {
     font-family: inconsolata;
-    src: url('/Blogin-FromDesign/fonts/inconsolata/Inconsolata-Regular.ttf');
+    src: url('/FromDesignToLIve/ClassEx_Cards_Resposive_Hambur/fonts/inconsolata/Inconsolata-Regular.ttf');
 }
