@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    transition: .4s;
+}
+
+:root {
+    --bg-clr: rgb(253, 215, 100);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    background-color: var(--bg-clr, lightblue);
+}
+
+/* Overriding CSS variable values */
+
+.bg-green {
+    --bg-clr: darkseagreen;
+}
+
+.bg-pink:hover {
+    --bg-clr: pink;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--btn-clr); /* --btn-clr is undefined in this scope */
+}
+
+.bg-pink span {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background-color: var(--bg-clr);
+}
+
+/* Scoped CSS variable declaration */
+
+section {
+    --btn-clr: lightsteelblue;
+    
+    margin-block-start: 100px;
+    text-align: center;
+}
+section button {
+    background-color: var(--btn-clr);
+}

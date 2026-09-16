@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/tags.css">
+        <title>tags</title>
+    </head>
+    <body>
+        <h1>Styling Checkboxes & Radio Buttons</h1>
+        
+        <fieldset>
+            <legend>Check Boxes - Multiple Selection</legend>
+
+            <input type="checkbox" id="cb-sent" />
+            <label class="tag" for="cb-sent">Sent</label>
+
+            <input type="checkbox" id="cb-starred" />
+            <label class="tag" for="cb-starred">Starred</label>
+
+            <input type="checkbox" id="cb-archived" />
+            <label class="tag" for="cb-archived">Archived</label>
+
+            <input type="checkbox" id="cb-important" />
+            <label class="tag" for="cb-important">Important</label>
+        </fieldset>
+        <fieldset>
+            <legend>Radio Buttons - Single Selection</legend>
+
+            <input id="rb-sent" type="radio" name="category">
+            <label for="rb-sent" class="tag">Sent</label>
+
+            <input id="rb-starred" type="radio" name="category">
+            <label for="rb-starred" class="tag">Starred</label>
+            
+            <input id="rb-archived" type="radio" name="category">
+            <label for="rb-archived" class="tag">Archived</label>
+            
+            <input id="rb-important" type="radio" name="category">
+            <label for="rb-important" class="tag">Important</label>
+        </fieldset>
+    </body>
+</html>

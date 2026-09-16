@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+.debug * {
+    outline: 1px solid orange;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    accent-color: #333;
+}
+
+main {
+    margin-block-start: 40px;
+}
+
+.sliders {
+    position: fixed;
+    left: 50%;
+    translate: -50% 0;
+    bottom: 0;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 150px max-content;
+    gap: 5px;
+    align-items: center;
+    justify-items: start;
+
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    margin-block-end: 15px;
+}
+
+legend {
+    font-size: 18px;
+}
+
+input[type="range"]:focus {
+    outline: solid 1px lightgrey;
+}
+
+label {
+    grid-column: 2;
+    font-size: 16px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: monospace;
+}
+
+h1 {
+    text-align: center;
+    /* font-size: max(15vw, 1em); */
+    /* font-size: min(15vw, 80px); */
+    /* font-size: clamp(1em, 15vw, 80px); */
+}
+
+p {
+    position: relative;
+    color: #aaa;
+    pointer-events: none;
+    padding-inline: 3em;
+}
+
+section {
+    position: relative;
+}
+
+body>span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(156, 179, 139, 0.7);
+    padding: 3px;
+    outline: 1px solid orange;
+}
+
+section>span {
+    position: absolute;
+    top: calc(-1em - 13px);
+    background-color: rgba(173, 216, 230, 0.7);
+    padding: 3px;
+}
+
+p>span {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    translate: -50% 0;
+    color: #333;
+    background-color: rgb(230, 226, 173, .7);
+    padding: 3px;
+}
+
+section {
+    margin-block: 60px;
+}
+
+.section::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: monospace;
+    font-size: 12px;
+    padding-inline: 5px;
+    background-color: rgba(211, 211, 211, 0.4);
+}
+
+/* :Section I */
+
+.section1 {
+    position: reltive;
+    font-size: 20px;
+}
+
+.section1::after {
+    content: 'Section I';
+}
+
+.section1 p {
+    font-size: 16px;
+}
+
+/* :Section II */
+
+.section2 {
+    font-size: 20px;
+}
+
+.section2::after {
+    content: 'Section II';
+}
+
+.section2 p {
+    font-size: 1em;
+}
+
+/* :Section III */
+
+.section3 {
+    font-size: 20px;
+}
+
+.section3::after {
+    content: 'Section III';
+}
+
+.section3 p {
+    font-size: 1rem;
+}

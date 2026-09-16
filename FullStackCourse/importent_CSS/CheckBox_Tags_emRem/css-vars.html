@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/css-vars.css">
+        <title>css-vars</title>
+    </head>
+    
+    <body>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint expedita cum harum placeat facilis, quo et, aspernatur ducimus ipsa magnam incidunt iure. Mollitia iure velit animi sequi in possimus illo.</p>
+        <p class="bg-green">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint expedita cum harum placeat facilis, quo et, aspernatur ducimus ipsa magnam incidunt iure. Mollitia iure velit animi sequi in possimus illo.</p>
+        <p>Lorem ipsum <span>dolor</span> sit, amet consectetur adipisicing elit. Sint expedita cum harum placeat facilis, quo et, aspernatur ducimus ipsa magnam incidunt iure. Mollitia iure velit animi sequi in possimus illo.</p>
+        <p class="bg-pink">Lorem ipsum <span>dolor</span> sit, amet consectetur adipisicing elit. Sint expedita cum harum placeat facilis, quo et, aspernatur ducimus ipsa magnam incidunt iure. Mollitia iure velit animi sequi in possimus illo.</p>
+    
+        <section>
+            <button onclick="changeColor(this)">Click Me</button>
+        </section>
+
+        <script>
+            function changeColor(elBtn) {
+                const currColor = elBtn.style.getPropertyValue('--btn-clr')
+                const newColor = currColor === 'pink' ? 'orange' : 'pink'
+                
+                elBtn.style.setProperty('--btn-clr', newColor)
+            }
+        </script>
+    </body>
+</html>

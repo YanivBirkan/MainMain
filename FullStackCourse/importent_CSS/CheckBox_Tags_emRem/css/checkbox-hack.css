@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: arial,sans-serif;
+    color: #333;
+}
+
+h1 {
+    width: max-content;
+    margin: 100px auto 10px;
+    font-family: monospace;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    /* display: none;  */
+}
+
+/* :The :checked pseudo class */
+
+.example1 input[type="checkbox"] {
+    transition: 300ms;
+}
+.example1 input[type="checkbox"]:checked {
+    translate: 20vw;
+    scale: 2;
+    rotate: 25deg;
+}
+
+/* :Basic Example */
+
+.example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 300px;
+    margin: 30px auto;
+
+    padding: 10px;
+    background-color: beige;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+}
+
+label {
+    cursor: pointer;
+}
+
+label span {
+    font-family: monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.control-me {
+    width: 160px;
+    height: 160px;
+    margin: 30px auto;
+    padding-block-start: 65px;
+
+    text-align: center;
+    font-size: 1.5em;
+    
+    background-color: #aaa;
+    border-radius: 50%;
+    
+    transition: all 0.4s;
+}
+
+input:checked + .control-me {
+    background-color: gold;
+}
+
+/* :Pill Checkbox Example */
+
+.pill-checkbox-label {
+    --height: 30px;
+    position: relative;
+    display: block;
+
+    background-color: rgb(121, 144, 152);
+    
+    width: 60px;
+    height: var(--height);
+    margin: 0 auto;
+    
+    border-radius: calc(var(--height) / 2);
+}
+
+.pill-checkbox-label > div {
+    position: absolute;
+    left: 0;
+    top:0;
+
+    width: 50%;
+    height: 100%;
+    scale: 85%;
+    
+    background-color: red;
+    border-radius: 50%;
+    
+    transition: 400ms ease-in-out;
+}
+
+#pill-checkbox:checked + .pill-checkbox-label > div {
+    translate: 100%;
+    background-color: green;
+}

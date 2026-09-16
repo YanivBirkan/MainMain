@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/has.css">
+        <title>has</title>
+    </head>
+    <body>
+        <h1>Some Tricks with the <span>:has()</span> selector</h1>
+
+        <section class="img-gallery">
+            <img src="https://unsplash.it/200/200/?1" />
+            <img src="https://unsplash.it/200/200/?2" />
+            <img src="https://unsplash.it/200/200/?3" />
+            <img src="https://unsplash.it/200/200/?4" />
+            <img src="https://unsplash.it/200/200/?5" />
+            <img src="https://unsplash.it/200/200/?6" />
+            <img src="https://unsplash.it/200/200/?7" />
+            <img src="https://unsplash.it/200/200/?8" />
+            <img src="https://unsplash.it/200/200/?9" />
+        </section>
+
+        <section class="avatar-list">
+            <img src="https://robohash.org/1" />
+            <img src="https://robohash.org/2" />
+            <img src="https://robohash.org/3" />
+            <img src="https://robohash.org/4" />
+            <img src="https://robohash.org/5" />
+            <img src="https://robohash.org/6" />
+            <img src="https://robohash.org/7" />
+        </section>
+        
+        <section class="cards">
+            <form>
+                <fieldset>
+                    <legend>Spacing</legend>
+
+                    <input id="x-wide" type="radio" name="spacing" />
+                    <label for="x-wide">x-wide</label>
+        
+                    <input id="wide" type="radio" name="spacing" />
+                    <label for="wide">wide</label>
+        
+                    <input id="medium" type="radio" name="spacing" />
+                    <label for="medium">medium</label>
+                    
+                    <input id="narrow" type="radio" name="spacing" />
+                    <label for="narrow">narrow</label>
+                </fieldset>
+            </form>
+
+            <div class="card-container">
+                <article class="card">1</article>
+                <article class="card">2</article>
+                <article class="card">3</article>
+                <article class="card">4</article>
+                <article class="card">5</article>
+            </div>
+        </section>
+    </body>
+</html>

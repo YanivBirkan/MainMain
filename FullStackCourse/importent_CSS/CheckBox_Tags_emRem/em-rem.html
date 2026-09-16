@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/em-rem.css">
+    <title>em & rem</title>
+</head>
+<body>
+    <span>1 rem === <span class="fs">16px</span></span>
+    <main class="debug">
+        <!-- <h1>Sizing Typography</h1> -->
+
+        <section class="section section1">
+            <span class="fs">20px</span>
+            <p><span class="fs">16px</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi maxime sunt voluptate dolorum odit ipsum. ea velit repellat dolorem voluptas, reprehenderit nemo odit quidem dolores quibusdam debitis saepe nostrum quisquam! Rerum nulla blanditiis cupiditate!</p>
+        </section>
+
+        <section class="section section2">
+            <span class="fs">20px</span>
+            <p><span class="fs">1em</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi maxime sunt voluptate dolorum odit ipsum. ea velit repellat dolorem voluptas, reprehenderit nemo odit quidem dolores quibusdam debitis saepe nostrum quisquam! Rerum nulla blanditiis cupiditate!</p>
+        </section>
+
+        <section class="section section3">
+            <span class="fs">20px</span>
+            <p><span class="fs">1rem</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi maxime sunt voluptate dolorum odit ipsum. ea velit repellat dolorem voluptas, reprehenderit nemo odit quidem dolores quibusdam debitis saepe nostrum quisquam! Rerum nulla blanditiis cupiditate!</p>
+        </section>
+    </main>
+
+    <section class="sliders">
+
+        <fieldset>
+            <legend>rem</legend>
+
+            <input oninput="setSize(this, 'px', ':root')" id="rem" type="range" min="12" max="36" value="16">
+            <label for="rem">:root<span></span></label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Section I</legend>
+
+            <input oninput="setSize(this, 'px', '.section1')" id="section1-fs" type="range" min="12" max="36" value="20">
+            <label for="section1-fs">.section1<span></span></label>
+    
+            <input oninput="setSize(this, 'px', '.section1 p')" id="section1-p-fs" type="range" min="12" max="36" value="16">
+            <label for="section1-p-fs">.section1 > p<span></span></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Section II</legend>
+
+            <input oninput="setSize(this, 'px', '.section2')" id="section1-fs" type="range" min="12" max="36" value="20">
+            <label for="section1-fs">.section2<span></span></label>
+    
+            <input oninput="setSize(this, 'em', '.section2 p')" id="section1-p-fs" type="range" min=".2" max="2" step=".1"  value="1">
+            <label for="section1-p-fs">.section2 > p<span></span></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Section III</legend>
+
+            <input oninput="setSize(this, 'px', '.section3')" id="section1-fs" type="range" min="12" max="36" value="20">
+            <label for="section1-fs">.section3<span></span></label>
+    
+            <input oninput="setSize(this, 'rem', '.section3 p')" id="section1-p-fs" type="range" min=".2" max="2" step=".1" value="1">
+            <label for="section1-p-fs">.section3 > p<span></span></label>
+        </fieldset>
+
+
+    </section>
+    <script>
+        function setSize({ value }, unit, selector){
+            const el = document.querySelector(selector)
+            const elSpan = document.querySelector(selector + ' .fs')
+            
+            el.style.fontSize = elSpan.innerText = value + unit
+        }
+    </script>
+</body>
+</html>

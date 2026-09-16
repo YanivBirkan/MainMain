@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.items {
+    display: grid;
+    place-items: center;
+
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+}
+.item {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid darkgrey;
+    
+    rotate: 22deg;
+    scale: .7;
+}
