@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    h1 {
+        color: yellow;
+    }
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    margin: 0 0 1em;
+    text-wrap: balance;
+}
+
+p {
+    margin: 0 0 1em;
+    text-wrap: pretty;
+}
+
+img,
+video,
+canvas,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    text-decoration-skip-ink: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+    font: inherit;
+}
