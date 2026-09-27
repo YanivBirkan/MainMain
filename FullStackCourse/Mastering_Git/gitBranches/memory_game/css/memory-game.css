@@ -31,8 +31,12 @@ main {
     background-color: lightblue;
 }
 
+.selected {
+    background-color: red;
+}
+
 .card.paired {
-    background-color: blue;
+    background-color: orange;
 }
 
 .card div {
