@@ -25,7 +25,8 @@
 .card button{
     width: 190px;
     height: 43px;
-    border: none;
+    border: 1px solid;
+    border-radius: 10px;
     background-color: #fff;
     color: var(--clr-primary-base);
 }

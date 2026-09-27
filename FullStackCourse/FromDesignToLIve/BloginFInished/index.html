@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="root main-layout" onload="onInit()">
+
+    <header class="main-header full main-layout">
+        <div class="header-wrapper flex flex-wrap space-between align-center">
+            <div class="main-logo"> Blogin<span>.</span></div>
+            <nav class="main-nav">
+                <ul class="grid-even clean-list">
+                    <li><a class="active" href="#">Journal</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button type="button" onclick="toggleMenu()">🍔</button>
+        </div>
+    </header>
+
+    <main class="main-content flex flex-column">
+
+        <div class="card">
+            <img src="img/001.png" alt="" class="src">
+            <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+            <div class="card-text">
+                <p>Ut enim <a href="#">link</a> ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.</p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+            </div>
+            <a href="#" class="btn rounded arrow card-link" onclick="showModal()">
+                Continue Reading
+            </a>
+        </div>
+
+        <div class="card">
+            <img src="img/002.png" alt="" class="src">
+            <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+            <div class="card-text">
+
+                <p class="card-txt1">Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.</p>
+                <p class="card-txt2">
+                    Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+            </div>
+            <a href="" class="btn rounded arrow card-link" onclick="showModal()">
+                Continue Reading
+            </a>
+        </div>
+
+        <div class="card">
+            <img src="img/003.png" alt="" class="src">
+            <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+            <div class="card-text">
+
+                <p class="card-txt1">Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.</p>
+                <p class="card-txt2">
+                    Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+            </div>
+            <a href="" class="btn rounded arrow card-link" onclick="showModal()">
+                Continue Reading
+            </a>
+        </div>
+        <nav class="page-nav flex space-between">
+            <a>← previous</a>
+            <a>next →</a>
+        </nav>
+    </main>
+    <dialog class="modal read-more-modal">
+            <h4>Join us to get access to the latest stories!</h4>
+            <input class="max-speed" type="email" placeholder="Enter email">
+            <div class="actions">
+                <button type="button" class="btn btn-cancel" onclick="onCloseModal()">Cancel</button>
+                <button type="button" class="btn btn-submit" onclick="onCloseModal()">Submit</button>
+            </div>
+    </dialog>
+
+
+
+
+
+    <footer class="main-footer full main-layout">
+        <div class="main-logo"> Blogin<span>.</span></div>
+        <small class="footer-rights">all rights reserved 2025</small>
+        <ul class="footer-social grid-even clean-list">
+            <li><a href="#" class="fa facebook">
+
+                </a></li>
+            <li><a href="#" class="fa twitter"></a></li>
+            <li><a href="#" class="fa behance"></a></li>
+            <li><a href="#" class="fa dribbble"></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open')
+        }
+        function showModal(){
+            const modal = document.querySelector('.read-more-modal');
+            modal.showModal(); 
+        }
+        
+function onCloseModal() {
+    document.querySelector('.read-more-modal').close()
+}
+
+    </script>
+
+    <script src="js/style.js"></script>
+
+
+</body>
+
+</html>

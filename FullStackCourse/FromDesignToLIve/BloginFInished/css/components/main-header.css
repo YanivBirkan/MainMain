@@ -1,0 +1,9 @@
+.main-header {
+    background-color: var(--clr-primary-header-bg);
+    box-shadow: inset 0px -6px 0 #111;
+}
+
+.main-header .main-logo {
+    color: var(--clr-primary--3);
+    margin-right: 2.5rem;
+}

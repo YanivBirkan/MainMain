@@ -1,0 +1,77 @@
+
+.modal {
+	width: 400px;
+	padding: 10px;
+
+	padding: 2em;
+	border: 1px solid lightgray;
+	transition: opacity 0.5s;
+}
+
+.modal h4{
+	color: var(--clr-primary-base);
+	text-transform: capitalize;
+}
+
+
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7); 
+
+}
+
+
+dialog.read-more-modal {
+	padding: 2em;
+	background: linear-gradient(to bottom, #eee, #fff);
+	border: 1px solid lightgray;
+}
+
+
+input[type="email"]{
+    width: 80%;           
+  padding: 10px 14px;     
+margin-block-end: 2rem;
+  border: 1px solid #ccc; 
+  border-radius: 6px;   
+  background-color: #fff;
+  color: #333;
+  outline: none;        
+}
+
+.actions {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+modal.btn {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-submit {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #0052a3;
+}
+
+.btn-cancel {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+.btn-cancel:hover {
+  background-color: #e4e4e4;
+}

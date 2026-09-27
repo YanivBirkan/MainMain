@@ -1,22 +1,43 @@
-/* euro fuerence  */
-
+/*  Lato  */
 @font-face {
-    font-family: eurofurence;
-    src: url('/FromDesignToLIve/Blog/fonts/eurofurence/eurof55.ttf');
+    font-family: Lato;
+    src: url('/fonts/Lato/Lato-Regular.ttf');
 }
 
-
-/* Lato  */
-
+/*  Lato-Bold  */
 @font-face {
-    font-family: lato;
-    src: url('/FromDesignToLIve/Blog/fonts/lato/Lato-Bold.ttf');
-
+    font-family: Lato-Bold;
+    src: url('/fonts/Lato/Lato-Bold.ttf');
 }
 
-/* Lato Bold  */
-
+/*  Eurofurence  */
 @font-face {
-    font-family: inconsolata;
-    src: url('/FromDesignToLIve/Blog/fonts/lato/Lato-Regular.ttf');
+    font-family: Eurofurence;
+    src: url('/fonts/Eurofurence/Eurofurence-regular.ttf');
+}
+
+/*  Font Awesome  */
+@font-face {
+    font-family: fa;
+    src: url('/fonts/fa/fa-brands-400.ttf');
+}
+
+.fa::before {
+    font-family: fa;
+}
+
+.fa.facebook::before {
+    content: "\f39e";
+}
+
+.fa.twitter::before {
+    content: "\f099";
+}
+
+.fa.behance::before {
+    content: "\f1b4";
+}
+
+.fa.dribbble::before {
+    content: "\f17d";
 }

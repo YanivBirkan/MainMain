@@ -1,0 +1,16 @@
+.card {
+    outline: 2px solid var(--clr-primary-bg);
+    margin-block-end: 40px;
+}
+
+.card .card-link {
+
+    align-self: end;
+    justify-self: start;
+
+}
+
+.card .card-link:hover {
+    color: var(--clr-hover);
+    border-color: var(--clr-hover);
+}

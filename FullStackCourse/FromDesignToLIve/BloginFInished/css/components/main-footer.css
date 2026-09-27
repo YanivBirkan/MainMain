@@ -1,0 +1,25 @@
+.main-footer {
+    justify-items: center;
+    padding-block: 4rem;
+    background-color: #E1E0E0;
+}
+
+.main-footer img {
+    max-width: 40px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.main-footer img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.main-footer>*:not(:last-child) {
+    margin-bottom: 1.875rem;
+}
+
+.main-footer .footer-social {
+    gap: 20px;
+}

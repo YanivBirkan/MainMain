@@ -1,0 +1,6 @@
+.main-content {
+    gap: 75px;
+    padding-block-start: 4.6875rem;
+    
+    border-inline: 1px solid var(--clr-primary-outline);
+}

@@ -129,9 +129,9 @@ function onReadCar(carId) {
     elModal.showModal()
 }
 
-// function onCloseCarDetailsModal() {
-//     document.querySelector('.car-details-modal').close()
-// }
+function onCloseCarDetailsModal() {
+    document.querySelector('.car-details-modal').close()
+}
 
 // // Filter, Sort & Pagination
 

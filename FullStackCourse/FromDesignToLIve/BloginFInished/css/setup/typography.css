@@ -1,0 +1,22 @@
+/* euro fuerence  */
+
+@font-face {
+    font-family: eurofurence;
+    src: url('/FromDesignToLIve/Blog/fonts/eurofurence/eurof55.ttf');
+}
+
+
+/* Lato  */
+
+@font-face {
+    font-family: lato;
+    src: url('/FromDesignToLIve/Blog/fonts/lato/Lato-Bold.ttf');
+
+}
+
+/* Lato Bold  */
+
+@font-face {
+    font-family: inconsolata;
+    src: url('/FromDesignToLIve/Blog/fonts/lato/Lato-Regular.ttf');
+}
