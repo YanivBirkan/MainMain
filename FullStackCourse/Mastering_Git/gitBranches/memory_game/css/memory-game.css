@@ -31,7 +31,9 @@ main {
     background-color: lightblue;
 }
 
-
+.selected2{
+    color: aqua;
+}
 .card.paired {
     background-color: orange;
 }
