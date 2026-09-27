@@ -31,9 +31,6 @@ main {
     background-color: lightblue;
 }
 
-.card.paired {
-    background-color: orange;
-}
 
 .card div {
     opacity: 0;
