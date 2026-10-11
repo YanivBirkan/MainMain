@@ -50,3 +50,6 @@ main {
 :is(.selected, .paired) div {
     opacity: 1;
 }
+.hidden{
+    background-color: #fff;
+}
