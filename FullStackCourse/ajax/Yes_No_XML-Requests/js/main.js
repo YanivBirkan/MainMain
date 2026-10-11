@@ -10,7 +10,7 @@ function onAsk() {
 
 function renderAns(res) {
     // console.log('render ans')
-    // console.log('res:', res)
+    console.log('res:', res)
     document.querySelector('.ans h2').innerText = res.answer
     document.querySelector('.ans img').src = res.image
     // showAns()
