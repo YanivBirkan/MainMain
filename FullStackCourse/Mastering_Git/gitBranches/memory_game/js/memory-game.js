@@ -1,7 +1,7 @@
 'use strict'
 
 function init() {
-
+	console.log("now its dynamic")
 	const nums = initNums()
 	const strHtml =
 		nums.map(num => `
