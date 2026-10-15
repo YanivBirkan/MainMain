@@ -1,0 +1,69 @@
+/* --- Base Styles --- */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #fcf8e3; 
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+
+.form table {
+    margin: 0 auto;
+    border-collapse: separate; 
+    border-spacing: 0 20px; 
+}   
+
+.form td.form-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;                    
+    background-color: #f7d242;   
+    border: 1px solid #000000;    
+    box-shadow: 4px 4px 0px #000000; 
+    border-radius: 4px;           
+    padding: 12px 30px;           
+    width: 400px;                 
+    
+}
+
+.form .form-box input[type="email"],
+.form .form-box input[type="date"],
+.form .form-box input[type="time"] {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.form .ColorsTitle {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.form td.heading-box h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.btn-set {
+    display: block;
+    margin: 25px auto 0 auto;    
+    background-color: #d9452b;   
+    color: #ffffff;             
+    font-weight: bold;
+    padding: 10px 25px;
+    border: 1px solid #000000;   
+    box-shadow: 3px 3px 0px #000000; 
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.btn-set:hover {
+    background-color: #b8321b;   
+}

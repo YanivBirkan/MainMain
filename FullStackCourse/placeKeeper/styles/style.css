@@ -1,0 +1,86 @@
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+}
+
+/* flex helpers */
+
+    .flex {
+        display: flex;
+    }
+
+    .flex.space-between {
+        justify-content: space-between;
+    }
+
+    .flex.align-center {
+        align-items: center;
+    }
+
+    /* list helpers */
+
+    .clean-list {
+        margin: 0;
+        padding: 0;    
+        padding-inline-end: 5rem;
+        list-style-type: none;
+        display: flex;         
+        align-items: center;   
+        gap: 15px;             
+    }
+
+ 
+    .main-nav li {
+        display: flex;
+        align-items: center;
+        gap: 15px;            
+    }
+
+    .main-nav li::after {
+        content: "|";
+        color: #000;           
+    }
+
+    .main-nav li:last-child::after {
+        content: "";
+    }
+
+
+    .main-header {
+        height: 3rem;
+        background-color: rgba(154, 223, 250, 0.71);
+    }
+
+.main-nav a.active {
+    font-weight: bold;
+    color: #0056b3; /* Or any color that stands out on your blue header */
+    border-bottom: 2px solid #0056b3; 
+}
+
+.logo {
+
+    color: #000;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-inline-start: 10rem;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+.image-container img{
+    width: 400px;
+    height: 400px;
+}
+
+.date-details{
+        display: flex;
+    justify-content: center; 
+    align-items: center;     
+}

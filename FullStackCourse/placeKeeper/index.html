@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body onload="onIndexInit()">
+    
+    <header class="main-header flex space-between align-center">
+        <div class="logo">Place Keeper </div>
+        <nav class="main-nav">
+            <ul class="flex clean-list ">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="HTML5Forms.html">Settings</a></li>
+            </ul>
+        </nav>
+        <!-- <button class="btn-toggle-menu" type="button" onclick="toggleMenu()">☰</button> -->
+    </header>
+    <h1>Welcome to place keeper!</h1>
+    <div class="image-container">
+        <img src="img/img1.jpg" class="img">
+    </div>
+    <div class="date-Details">
+        <h3>Birth Date: <span class="date"></span></h3>
+        <h3>Birth Date: <span class="time"></span></h3>
+    </div>
+
+
+  
+
+</body>
+
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/user.service.js"></script>
+    <script src="js/services/index.controller.js"></script> 
+</html>

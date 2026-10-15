@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+
+    <title>HTML5 Forms</title>
+
+    <header class="main-header flex space-between align-center">
+      <div class="logo">Place Keeper</div>
+      <nav class="main-nav">
+        <ul class="flex clean-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#">Places</a></li>
+          <li><a href="HTML5Forms.html">Settings</a></li>
+        </ul>
+      </nav>
+      <!-- <button class="btn-toggle-menu" type="button" onclick="toggleMenu()">☰</button> -->
+    </header>
+    <style>
+      input:invalid {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body class="body" >
+    <h2>Sign Up Form</h2>
+    <div class="main-layout">
+      <form id="frmRegister" onsubmit="onSubmit(event)" class="form">
+        <table>
+          <tr>
+            <td class="form-box">
+              <label for="email">E-Mail:</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Insert your email here"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="form-box">
+              <label for="age">Age:</label>
+              <input
+                type="range"
+                id="age"
+                name="age"
+                step="5"
+                min="18"
+                max="120"
+                value="20"
+                oninput="showAge(this.value)"
+              />
+              <span id="sAge">20</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ColorsTitle">
+              <h2>Colors -</h2>
+            </td>
+          </tr>
+          <tr>
+            <td class="form-box">
+              <label for="BgColor">Set Background Color</label>
+              <input type="color" id="BgColor" name="BgColor" value="#ff0000" />
+            </td>
+          </tr>
+          <tr>
+            <td class="form-box">
+              <label for="TxtColor">Set Text Color</label>
+              <input
+                type="color"
+                id="TxtColor"
+                name="TxtColor"
+                value="#ff0000"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="form-box">
+              <label for="dob">Date of Birth:</label>
+              <input value="1989-03-28" type="date" id="dob" name="dob" />
+            </td>
+          </tr>
+          <tr>
+            <td class="form-box">
+              <label for="tob">Birth Time:</label>
+              <input value="00:00" type="time" id="tob" name="tob" />
+            </td>
+          </tr>
+        </table>
+      </form>
+
+      <button type="submit" form="frmRegister" class="btn-set">Set</button>
+    </div>
+  </body>
+
+  <script src="js/services/storage.service.js"></script>
+  <script src="js/services/user.service.js"></script>
+  <script src="js/services/place.service.js"></script>
+<script src="js/services/index.controller.js"></script>
+
+</html>
